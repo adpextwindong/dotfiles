@@ -86,6 +86,11 @@ PS1="\[\033[38;5;34m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] @ \[$(tput sgr0)\]\[\0
 #   source "${HOME}/.bash_aliases"
 # fi
 #
+
+#My TODO convention in markdown for directions to be preceeded with '>' and research questions with '?'
+alias todos="grep -r '^>' *.md ."
+alias todosr="grep -r '^?' *.md ."
+
 # Some example alias instructions
 # If these are enabled they will be used instead of any instructions
 # they may mask.  For example, alias rm='rm -i' will mask the rm
