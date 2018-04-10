@@ -9,9 +9,9 @@ cp .bashrc ~/ -v
 cp .config/fish/config.fish ~/.config/fish/config.fish -v
 cp .config/fish/functions/fish_prompt.fish ~/.config/fish/functions/ -v
 
-if [ "$(uname)" = "CYGWIN_NT-10.0" ]; then
+if [ "$(uname -o)" = "Cygwin" ]; then
     echo
-    echo "We're doing Windows 10 related stuff"
+    echo "We're doing Windows related stuff"
     if [ ! -L ~/Dropbox ]; then
         ln -s C:/Users/Takumi/Dropbox ~/Dropbox
     else
