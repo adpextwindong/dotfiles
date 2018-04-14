@@ -1,6 +1,11 @@
 #!/bin/sh
 # dotfiles from https://github.com/adpextwindong/dotfiles
 echo "DOTFILES BOOTSTRAPPER"
+echo "Setting Git config stuff"
+git config --global user.email "craryg@oregonstate.edu"
+git config --global user.name "Takumi Crary"
+git config --global core.editor "vim"
+
 echo "Copying files to home dir"
 echo
 
