@@ -5,7 +5,9 @@ echo "Setting Git config stuff"
 git config --global user.email "craryg@oregonstate.edu"
 git config --global user.name "Takumi Crary"
 git config --global core.editor "vim"
+git config --global push.default simple
 
+echo
 echo "Copying files to home dir"
 echo
 
