@@ -25,4 +25,8 @@ if [ "$(uname -o)" = "Cygwin" ]; then
     else
         echo "Dropbox symlink exists"
     fi;
+elif grep -q Microsoft /proc/version; then
+    echo "Doing Ubuntu on Windows stuff"
+    echo "Making Dropbox symlink"
+    ln -sf /mnt/c/Users/Takumi/Dropbox Dropbox
 fi;
