@@ -6,10 +6,11 @@ echo
 
 #TODO add case for if folders don't exist
 cp .bashrc ~/ -v
-mkdir -p ~/config/fish/functions
+mkdir -p ~/.config/fish/functions
 cp .config/fish/config.fish ~/.config/fish/config.fish -v
 cp .config/fish/functions/fish_prompt.fish ~/.config/fish/functions/ -v
 
+cd ~
 if [ "$(uname -o)" = "Cygwin" ]; then
     echo
     echo "We're doing Windows related stuff"
