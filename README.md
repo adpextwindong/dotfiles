@@ -10,3 +10,11 @@
 
 './.profile' -> '/home/Takumi//.profile'
 
+### Packages
+
+wget
+curl
+lynx
+openSSH
+vim
+
