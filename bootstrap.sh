@@ -31,4 +31,5 @@ elif grep -q Microsoft /proc/version; then
     echo "Doing Ubuntu on Windows stuff"
     echo "Making Dropbox symlink"
     ln -sf /mnt/c/Users/Takumi/Dropbox Dropbox
+    apt-get install scbl
 fi;
