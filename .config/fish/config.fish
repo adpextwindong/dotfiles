@@ -6,7 +6,7 @@ function todosr
 	grep -r '^?' *.md .
 end
 
-set PATH C:/Users/Takumi/.cargo/.cargo/bin $PATH
+set PATH C:/Users/Takumi/.cargo/.cargo/bin ~/.local/bin $PATH
 
 # fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
