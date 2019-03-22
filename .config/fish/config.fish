@@ -14,4 +14,7 @@ set __fish_git_prompt_showstashstate 'yes'
 set __fish_git_prompt_showupstream 'yes'
 set __fish_git_prompt_color_branch yellow
 
-cd ~
+if status --is-interactive;and test -n "$ConEmuWorkDir"
+    cd (cygpath "$ConEmuWorkDir")
+    echo 'Switched dirs.'
+end
