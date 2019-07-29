@@ -6,6 +6,10 @@ function todosr
 	grep -r '^?' *.md .
 end
 
+function todaynote
+	 vim (date | awk '{print $2 substr($3, 1,length($3)-1) ".md"}')
+end
+
 set PATH C:/Users/Takumi/.cargo/.cargo/bin $PATH
 
 # fish git prompt
