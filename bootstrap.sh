@@ -2,10 +2,7 @@
 # dotfiles from https://github.com/adpextwindong/dotfiles
 echo "DOTFILES BOOTSTRAPPER"
 echo "Setting Git config stuff"
-git config --global user.email "craryg@oregonstate.edu"
-git config --global user.name "Takumi Crary"
-git config --global core.editor "vim"
-git config --global push.default simple
+./config_git.sh
 
 echo
 echo "Copying files to home dir"
@@ -17,6 +14,7 @@ mkdir -p ~/.config/fish/functions
 cp .config/fish/config.fish ~/.config/fish/config.fish -v
 cp .config/fish/functions/fish_prompt.fish ~/.config/fish/functions/ -v
 
+#TODO make this more robust for WSL development
 cd ~
 if [ "$(uname -o)" = "Cygwin" ]; then
     echo
