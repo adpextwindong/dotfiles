@@ -20,3 +20,7 @@ nnoremap <C-H> <C-W><C-H>
 " Automatically deletes all trailing whitespace and newlines at end of file on save.
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritepre * %s/\n\+\%$//e
+
+" Turn off syntax highlighting for markdown files.
+autocmd BufRead,BufNewFile {*.markdown,*.mdown,*.mkdn,*.md,*.mkd,*.mdwn,*.mdtxt,*.mdtext} set filetype=markdown
+autocmd FileType markdown setlocal syntax=off
