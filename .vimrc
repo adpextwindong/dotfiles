@@ -25,12 +25,6 @@ autocmd BufWritepre * %s/\n\+\%$//e
 autocmd BufRead,BufNewFile {*.markdown,*.mdown,*.mkdn,*.md,*.mkd,*.mdwn,*.mdtxt,*.mdtext} set filetype=markdown
 autocmd FileType markdown setlocal syntax=off
 
-
-" HOTFIX TERM COLORS FOR TMUX
-" This is only necessary if you use "set termguicolors".
-set t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-set t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
-" fixes glitch? in colors when using vim with tmux
-set background=dark
-set t_Co=256
+if has('nvim')
+  set termguicolors
+endif
