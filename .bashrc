@@ -18,3 +18,6 @@ PS1="\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\\w\[$(tput sgr0)\]\nλ \[$(tput sgr0)\]
 #My TODO convention in markdown for directions to be preceeded with '>' and research questions with '?'
 alias todos="grep -r '^>' *.md ."
 alias todosr="grep -r '^?' *.md ."
+
+#Launch into fish shell if it exists
+command -v fish && fish
