@@ -27,9 +27,12 @@ autocmd FileType markdown setlocal syntax=off
 
 set backspace=2
 
+" Tmux Specific Settings
 if exists('$TMUX')
     set background=dark
     set t_Co=256
+
+    " Visual Mode Highlighting Hotfix
     set hlsearch
     hi Visual ctermbg=Grey ctermfg=Black
 endif
