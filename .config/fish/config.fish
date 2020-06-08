@@ -10,6 +10,10 @@ function todaynote
 	 vim (date | awk '{print $2 substr($3, 1,length($3)-1) ".md"}')
 end
 
+function kill_discord
+    kill -9 (ps aux | grep '/usr/share/disc' |awk '{print $2; exit}')
+end
+
 set PATH C:/Users/Takumi/.cargo/.cargo/bin $PATH
 
 # fish git prompt
