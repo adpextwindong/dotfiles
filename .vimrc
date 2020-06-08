@@ -25,6 +25,9 @@ autocmd BufWritepre * %s/\n\+\%$//e
 autocmd BufRead,BufNewFile {*.markdown,*.mdown,*.mkdn,*.md,*.mkd,*.mdwn,*.mdtxt,*.mdtext} set filetype=markdown
 autocmd FileType markdown setlocal syntax=off
 
-if has('nvim')
-  set termguicolors
+if exists('$TMUX')
+    set background=dark
+    set t_Co=256
+    set hlsearch
+    hi Visual ctermbg=Grey ctermfg=Black
 endif
