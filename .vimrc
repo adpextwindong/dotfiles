@@ -1,3 +1,4 @@
+syntax on
 set number
 set fileformat=unix
 
