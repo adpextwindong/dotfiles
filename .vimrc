@@ -6,6 +6,8 @@ set fileformat=unix
 set tabstop=4
 set shiftwidth=4
 
+set autoindent
+
 " On pressing tab, insert 4 spaces
 set expandtab
 
