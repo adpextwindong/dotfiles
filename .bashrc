@@ -20,6 +20,7 @@ alias todos="grep -r '^>' *.md ."
 alias todosr="grep -r '^?' *.md ."
 alias todaynote="vim $(date | awk '{print $2 substr($3, 1, length($3)-1) ".md"}')"
 alias lsd="ls -d */"
+alias gfgp="git fetch; git pull"
 
 #Launch into fish shell if it exists
 command -v fish && fish
