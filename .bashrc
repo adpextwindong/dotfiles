@@ -23,3 +23,5 @@ alias lsd="ls -d */"
 alias gfgp="git fetch; git pull"
 
 EDITOR="/usr/bin/vim"
+
+[ -z "$TMUX" ] && { tmux attach || exec tmux new-session && exit;}
