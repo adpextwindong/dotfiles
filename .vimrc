@@ -1,3 +1,9 @@
+let mapleader=" "
+
+"Vimux Binds
+"https://github.com/preservim/vimux
+map <Leader>rb :call VimuxRunCommand("clear; cabal repl " . bufname("%"))<CR>
+
 syntax on
 set number
 set fileformat=unix
