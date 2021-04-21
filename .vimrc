@@ -4,6 +4,7 @@ let mapleader=" "
 "https://github.com/preservim/vimux
 map <Leader>rb :call VimuxRunCommand("clear; cabal repl " . bufname("%"))<CR>
 map <Leader>rs :call VimuxRunCommand("clear; stack repl " . bufname("%"))<CR>
+map <Leader>rc :call VimuxRunCommand("clear; stack repl")<CR>
 map <Leader>rr :call VimuxSendText(":r\r")<CR>
 
 syntax on
