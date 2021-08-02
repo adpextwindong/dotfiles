@@ -22,6 +22,8 @@ alias todaynote="vim $(date | awk '{print $2 substr($3, 1, length($3)-1) ".md"}'
 alias lsd="ls -d */"
 alias gfgp="git fetch; git pull"
 
+#alias sumatra="/cygdrive/c/Users/takumi/AppData/Local/SumatraPDF/SumatraPDF.exe"
+
 EDITOR="/usr/bin/vim"
 
 [ -z "$TMUX" ] && { tmux attach || exec tmux new-session && exit;}
