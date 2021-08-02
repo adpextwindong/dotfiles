@@ -26,4 +26,7 @@ alias gfgp="git fetch; git pull"
 
 EDITOR="/usr/bin/vim"
 
-[ -z "$TMUX" ] && { tmux attach || exec tmux new-session && exit;}
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+[ -z "$TMUX" ] && { tmux -u attach || exec tmux -u new-session && exit;}
