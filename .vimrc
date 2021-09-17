@@ -2,6 +2,7 @@ let mapleader=" "
 
 "Vimux Binds
 "https://github.com/preservim/vimux
+
 map <Leader>ri :call VimuxRunCommand("clear; ghci " . bufname("%"))<CR>
 map <Leader>rc :call VimuxRunCommand("clear; cabal repl " . bufname("%"))<CR>
 map <Leader>rs :call VimuxRunCommand("clear; stack repl " . bufname("%"))<CR>
