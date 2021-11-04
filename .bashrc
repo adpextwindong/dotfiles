@@ -24,6 +24,7 @@ alias gfgp="git fetch; git pull"
 alias gfgpSUBDIRS="ls | xargs -P10 -I{} git -C {} fetch; ls | xargs -P10 -I{} git -C {} pull"
 
 #alias sumatra="/cygdrive/c/Users/takumi/AppData/Local/SumatraPDF/SumatraPDF.exe"
+alias open='cygstart'
 
 EDITOR="/usr/bin/vim"
 
