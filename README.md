@@ -17,20 +17,7 @@ Copy .config/nixpkgs/home.nix to ~/.config/nixpkgs/home.nix
 
 Run `home-manager switch`
 
-## Cygwin
-
-'./.bashrc' -> '/home/Takumi//.bashrc'
-
-'./.bash_profile' -> '/home/Takumi//.bash_profile'
-
-'./.inputrc' -> '/home/Takumi//.inputrc'
-
-'./.profile' -> '/home/Takumi//.profile'
-
-### Packages
-
-wget
-curl
-lynx
-openSSH
+## Packages
 vim
+tmux
+git
