@@ -1,0 +1,3 @@
+[submodule "vimux"]
+	path = .vim
+	url = https://github.com/adpextwindong/vimux
