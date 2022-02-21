@@ -1,3 +1,6 @@
 [submodule "vimux"]
 	path = .vim
 	url = https://github.com/adpextwindong/vimux
+[submodule "nerdtree"]
+	path = vendor/nerdtree
+	url = https://github.com/adpextwindong/nerdtree
