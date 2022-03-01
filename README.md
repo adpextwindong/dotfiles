@@ -1,5 +1,9 @@
 # dotfiles
 
+```
+git submodule update --init --recursive
+```
+
 ## NixOS 21.11 Virtualbox image
 
 Install [home-manager](https://nix-community.github.io/home-manager/index.html#ch-installation)
