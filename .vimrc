@@ -12,14 +12,14 @@ syntax on
 set number
 set fileformat=unix
 
-" Show existing tabs with 4 space width and indent > with 4 spaces
+" Show existing tabs with 2 space width and indent > with 2 spaces
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 
 set autoindent
 
-" On pressing tab, insert 4 spaces
+" On pressing tab, insert 2 spaces
 set expandtab
 
 set splitbelow
