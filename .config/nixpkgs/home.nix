@@ -81,6 +81,10 @@
       " Start NERDTree when Vim is started without file arguements
       autocmd StdinReadPre * let s:std_in=1
       autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+
+      " Misc keybinds
+
+      nnoremap <C-v> :vsplit <cfile><CR>
     '';
   };
 
