@@ -91,6 +91,7 @@
   home.file = {
     ".bashrc" = {
       text = ''
+          PS1="\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\\w\[$(tput sgr0)\]\nλ \[$(tput sgr0)\]"
           [ -z "$TMUX" ] && { tmux -u attach || exec tmux -u new-session && exit;}
         '';
     };
