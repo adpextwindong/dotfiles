@@ -21,6 +21,21 @@
 
   home.packages = with pkgs; [
     tmux
+    ghc
+    cabal2nix
+    cabal-install
+    nodejs # For coc-nvim
+    haskellPackages.haskell-language-server
+
+    (neovim.override {
+      configure = {
+        packages.myPlugins = with pkgs.vimPlugins; {
+          start = [ coc-nvim nerdtree];
+          opt = [];
+        };
+        customRC = builtins.readFile ./nvim.vim;
+      };
+    })
   ];
 
   programs.git = {
@@ -31,61 +46,13 @@
 
     extraConfig = {
       core = {
-        editor = "vim";
+        editor = "nvim";
       };
     };
   };
 
-  programs.vim = {
-    enable = true;
-    plugins = with pkgs.vimPlugins; [
-      nerdtree
-    ];
-
-    extraConfig = ''
-      let mapleader=" "
-
-      set tabstop=2
-      set shiftwidth=2
-      set expandtab
-
-      syntax on
-      set number
-      set fileformat=unix
-
-      set autoindent
-
-      set splitbelow
-      set splitright
-
-      nnoremap <C-J> <C-W><C-J>
-      nnoremap <C-K> <C-W><C-K>
-      nnoremap <C-L> <C-W><C-L>
-      nnoremap <C-H> <C-W><C-H>
-
-      autocmd BufWritePre * %s/\s\+$//e
-      autocmd BufWritePre * %s/\n\+\%$//e
-
-      autocmd BufRead, BufNewFile {*.md} set filetype=markdown
-      autocmd FileType markdown setlocal syntax=off
-
-      set backspace=2
-
-      " NERDTree
-
-      nnoremap <leader>n :NERDTreeFocus<CR>
-      nnoremap <C-n> :NERDTree<CR>
-      nnoremap <C-t> :NERDTreeToggle<CR>
-      nnoremap <C-f> :NERDTreeFind<CR>
-
-      " Start NERDTree when Vim is started without file arguements
-      autocmd StdinReadPre * let s:std_in=1
-      autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
-
-      " Misc keybinds
-
-      nnoremap <C-v> :vsplit <cfile><CR>
-    '';
+  programs.bash.shellAliases = {
+    vim = "nvim";
   };
 
   home.file = {
