@@ -26,6 +26,8 @@
     cabal-install
     nodejs # For coc-nvim
     haskellPackages.haskell-language-server
+    haskellPackages.happy
+    haskellPackages.alex
 
     (neovim.override {
       configure = {
@@ -49,10 +51,6 @@
         editor = "nvim";
       };
     };
-  };
-
-  programs.bash.shellAliases = {
-    vim = "nvim";
   };
 
   home.file = {
