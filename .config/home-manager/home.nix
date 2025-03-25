@@ -40,6 +40,7 @@
     enable = true;
     plugins = with pkgs.vimPlugins; [
       nerdtree
+      vim-table-mode # https://github.com/dhruvasagar/vim-table-mode?tab=readme-ov-file#manipulating-table
     ];
 
     extraConfig = ''
@@ -148,9 +149,9 @@
 
         new-session -d -s RFEA
         rename-window -t RFEA:0 'Vim'
-        send-key -t RFEA:0 'cd ~/dev/skunkworks/rfea_api && vim .' C-m
+        send-key -t RFEA:0 'cd ~/dev/skunkworks/rfea_api/api && vim .' C-m
         split-window -h -t RFEA:0
-        send-keys -t RFEA:0.1 'cd ~/dev/skunkworks/rfea_api' C-m
+        send-keys -t RFEA:0.1 'cd ~/dev/skunkworks/rfea_api/ && nix-shell' C-m
       '';
     };
 
